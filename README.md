@@ -100,9 +100,9 @@ First Enter:
 
 and press `i` on the Language Server you wish to install
 
-Next you will need to add the server to this list: [servers](https://github.com/LunarVim/nvim-basic-ide/blob/0e65f504f634026f5765ce6a092612d385d6306d/lua/user/lsp/mason.lua#L1)
+Next you will need to add the server to this list: [servers](https://github.com/sadikeey/nvim/blob/lua/user/lsp/mason.lua)
 
-Note: Builtin LSP doesn't contain all lsps from [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#terraform_lsp).
+Note: Builtin LSP doesn't contain all lsps from [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md).
 
 If you want to install any from there, for example terraform_lsp(which adds more functionality than terraformls, like complete resource listing),
 
@@ -128,13 +128,13 @@ local servers = {
 
 ### Formatters and linters
 
-Make sure the formatter or linter is installed and add it to this setup function: [null-ls](https://github.com/sadikeey/nvim/blob/8b9ec3bffe8c8577042baf07c75408532a733fea/lua/user/lsp/null-ls.lua#L13)
+Make sure the formatter or linter is installed and add it to this setup function: [null-ls](https://github.com/sadikeey/nvim/blob/8b9ec3bffe8c8577042baf07c75408532a733fea/lua/user/lsp/null-ls.lua)
 
 **NOTE** Some are already setup as examples, remove them if you want
 
 ### Plugins
 
-You can install new plugins here: [plugins](https://github.com/sadikeey/nvim/blob/8b9ec3bffe8c8577042baf07c75408532a733fea/lua/user/plugins.lua#L42)
+You can install new plugins here: [plugins](https://github.com/sadikeey/nvim/blob/lua/user/plugins.lua)
 
 ---
 
