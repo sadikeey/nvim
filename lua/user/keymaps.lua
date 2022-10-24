@@ -60,7 +60,7 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- For compiling different languages
 keymap("n", "<leader>cc", ":!g++ % -o %:r.out;<CR>", opts)
-keymap("n", "<leader>cp", ":silent execute '!pandoc % -o %:r.pdf'<CR>", opts) -- For pandoc compile
+keymap("n", "<leader>cp", ":silent execute '!buildNote.sh %'<CR>", opts) -- For pandoc compile
 
 ----------------- Insert ---------------------
 
