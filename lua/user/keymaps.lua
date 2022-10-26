@@ -29,7 +29,7 @@ keymap("n", "<leader><S-q>", ":q!<CR>", opts)
 keymap("n", "<leader>wq", ":wq<CR>", opts)
 
 -- Better renaming
-keymap("n", "<leader>r", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+keymap("n", "<C-r>", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -61,6 +61,9 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- For compiling different languages
 keymap("n", "<leader>cc", ":!g++ % -o %:r.out;<CR>", opts)
 keymap("n", "<leader>cp", ":silent execute '!buildNote.sh %'<CR>", opts) -- For pandoc compile
+
+-- Code Runner
+keymap("n", "<leader>r", ":Jaq<CR>", opts)
 
 ----------------- Insert ---------------------
 

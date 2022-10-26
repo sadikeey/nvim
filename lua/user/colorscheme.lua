@@ -1,5 +1,13 @@
-local colorscheme = "onedark"
+local colorscheme = "gruvbox"
 
+-- For gruvbox
+vim.cmd([[
+    let g:gruvbox_contrast_dark = 'hard'
+    let g:gruvbox_transparent_bg = 1
+    autocmd SourcePost * highlight Normal ctermbg=NONE guibg=NONE
+    highlight LineNr ctermbg=NONE guibg=NONE
+    highlight SignColumn ctermbg=NONE guibg=NONE
+]])
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
@@ -14,11 +22,3 @@ end
 --   let g:gruvbox_material_ui_contrast = 'high'
 -- ]])
 --
--- -- For gruvbox
--- vim.cmd([[
---     let g:gruvbox_contrast_dark = 'hard'
---     let g:gruvbox_transparent_bg = 1
---     autocmd SourcePost * highlight Normal ctermbg=NONE guibg=NONE
---     highlight LineNr ctermbg=NONE guibg=NONE
---     highlight SignColumn ctermbg=NONE guibg=NONE
--- ]])

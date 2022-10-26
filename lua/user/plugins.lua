@@ -109,6 +109,9 @@ return packer.startup(function(use)
   -- For Markdown
   use { "davidgranstrom/nvim-markdown-preview" }
 
+  -- For Code Runner
+  use {"is0n/jaq-nvim", commit = "236296aae555657487d1bb4d066cbde9d79d8cd4"}
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
