@@ -11,7 +11,7 @@ vim.g.mapleader = " "
 --   normal_mode = "n",
 --   insert_mode = "i",
 --   visual_mode = "v",
---   visual_block_mode = "x",
+  -- visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
 
@@ -64,6 +64,16 @@ keymap("n", "<leader>cp", ":silent execute '!buildNote.sh %'<CR>", opts) -- For 
 
 -- Code Runner
 keymap("n", "<leader>r", ":Jaq<CR>", opts)
+
+-- Backspace delete
+keymap("n", "C-BS", "dvb", opts)
+
+-- Select All
+keymap("n", "<C-a>", "gg<S-v>G")
+
+-- Split window
+keymap('n', 'ss', ':split<Return><C-w>w')
+keymap('n', 'sv', ':vsplit<Return><C-w>w')
 
 ----------------- Insert ---------------------
 

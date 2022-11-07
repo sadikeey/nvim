@@ -1,73 +1,89 @@
-require('jaq-nvim').setup{
+M = {}
+local status_ok, jaq_nvim = pcall(require, "jaq-nvim")
+if not status_ok then
+  return
+end
+
+jaq_nvim.setup {
+  -- Commands used with 'Jaq'
   cmds = {
-    -- Uses vim commands
-    internal = {
-      lua = "luafile %",
-      vim = "source %"
+    -- Default UI used (see `Usage` for options)
+    default = "term",
+
+    -- Uses external commands such as 'g++' and 'cargo'
+    external = {
+      typescript = "deno run %",
+      javascript = "node %",
+      -- markdown = "glow %",
+      python = "python %",
+      -- rust = "rustc % && ./$fileBase && rm $fileBase",
+      rust = "cargo run",
+      go = "go run %",
+      sh = "sh %",
+      c        = "gcc $file -o $fileBase.out; ./$fileBase.out",
+      -- cpp      = "g++ $file -o $fileBase.out; ./$fileBase.out",
+      cpp      = "g++ $file; ./a.out",
+      java     = "javac $file; java $fileBase",
+ 
     },
 
-    -- Uses shell commands
-    external = {
-      markdown = "glow %",
-      python   = "python3 %",
-      go       = "go run %",
-      sh       = "sh %",
-      c        = "gcc $file -o $fileBase.out; ./$fileBase.out",
-      cpp      = "g++ $file -o $fileBase.out; ./$fileBase.out",
-      java     = "javac $file; java $fileBase",
-    }
+    -- Uses internal commands such as 'source' and 'luafile'
+    internal = {
+      -- lua = "luafile %",
+      -- vim = "source %",
+    },
   },
 
   behavior = {
     -- Default type
-    default     = "terminal",
+    default = "terminal",
 
     -- Start in insert mode
     startinsert = true,
 
     -- Use `wincmd p` on startup
-    wincmd      = false,
+    wincmd = false,
 
     -- Auto-save files
-    autosave    = true
+    autosave = true,
   },
 
+  -- UI settings
   ui = {
+    -- Floating Window / FTerm settings
     float = {
-      -- See ':h nvim_open_win'
-      border    = "single",
+      -- Floating window border (see ':h nvim_open_win')
+      border = "none",
 
-      -- See ':h winhl'
-      winhl     = "Normal",
-      borderhl  = "FloatBorder",
+      -- Num from `0 - 1` for measurements
+      height = 0.8,
+      width = 0.8,
+      x = 0.5,
+      y = 0.5,
 
-      -- See ':h winblend'
-      winblend  = 0,
+      -- Highlight group for floating window/border (see ':h winhl')
+      border_hl = "FloatBorder",
+      float_hl = "Normal",
 
-      -- Num from `0-1` for measurements
-      height    = 0.8,
-      width     = 0.8,
-      x         = 0.5,
-      y         = 0.5
+      -- Floating Window Transparency (see ':h winblend')
+      blend = 0,
     },
 
     terminal = {
-      -- Window position
-      position = "bot",
+      -- Position of terminal
+      position = "vert",
 
-      -- Window size
-      size     = 15,
+      -- Open the terminal without line numbers
+      line_no = false,
 
-      -- Disable line numbers
-      line_no  = false
+      -- Size of terminal
+      size = 80,
     },
-
-    quickfix = {
-      -- Window position
-      position = "bot",
-
-      -- Window size
-      size     = 10
-    }
-  }
+  },
 }
+
+local opts = { noremap = true, silent = true }
+local keymap = vim.api.nvim_set_keymap
+
+keymap("n", "<m-r>", ":silent only | Jaq<cr>", opts)
+return M
