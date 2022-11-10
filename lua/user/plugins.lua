@@ -64,7 +64,7 @@ return packer.startup(function(use)
   use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
   use { "sainnhe/gruvbox-material", commit = "2807579bd0a9981575dbb518aa65d3206f04ea02" }
   use { "gruvbox-community/gruvbox", commit = "95b120a15d0765037d2836d04e3360c273caf111" }
-  use { "navarasu/onedark.nvim", commit = "64fc4bc348e52e8e578beca26021d47c4d272a2a" }
+  use { "navarasu/onedark.nvim" }
 
   -- Colorizer
   use { "NvChad/nvim-colorizer.lua", commit = "9dd7ecde55b06b5114e1fa67c522433e7e59db8b" }
@@ -108,9 +108,11 @@ return packer.startup(function(use)
 
   -- For Markdown
   use { "davidgranstrom/nvim-markdown-preview" }
+  use { "ellisonleao/glow.nvim" }
 
   -- For Code Runner
   use {"is0n/jaq-nvim", commit = "236296aae555657487d1bb4d066cbde9d79d8cd4"}
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
