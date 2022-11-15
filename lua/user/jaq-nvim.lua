@@ -24,6 +24,7 @@ jaq_nvim.setup {
       -- cpp      = "g++ $file -o $fileBase.out; ./$fileBase.out",
       cpp      = "g++ $file; ./a.out",
       java     = "javac $file; java $fileBase",
+      html     = "live-server $fileBase",
  
     },
 
@@ -71,13 +72,13 @@ jaq_nvim.setup {
 
     terminal = {
       -- Position of terminal
-      position = "vert",
+      position = "horizontal",
 
       -- Open the terminal without line numbers
       line_no = false,
 
       -- Size of terminal
-      size = 80,
+      size = 15,
     },
   },
 }
