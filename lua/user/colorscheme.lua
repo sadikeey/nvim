@@ -1,23 +1,9 @@
-local colorscheme = "gruvbox-material"
+require "user.colorshemes.gruvbox-material"
 
--- Gruvbox material specific settings.
-vim.g.gruvbox_material_background = 'hard'
-vim.g.gruvbox_material_better_performance = 1
-vim.g.gruvbox_material_transparent_background = 1
-vim.g.gruvbox_material_ui_contrast = 'high'
+vim.cmd ( "autocmd SourcePost * highlight Normal ctermbg=NONE guibg=NONE" )
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+local status_ok, _ = pcall(vim.cmd, "colorscheme gruvbox-material")
 if not status_ok then
+  print( "Colorscheme not found !" )
 	return
 end
-
--- For gruvbox
--- vim.cmd([[
---     let g:gruvbox_contrast_dark = 'hard'
---     let g:gruvbox_transparent_bg = 1
---     autocmd SourcePost * highlight Normal ctermbg=NONE guibg=NONE
---     highlight LineNr ctermbg=NONE guibg=NONE
---     highlight SignColumn ctermbg=NONE guibg=NONE
--- ]])
-
-

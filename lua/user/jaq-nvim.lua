@@ -14,15 +14,14 @@ jaq_nvim.setup {
     external = {
       typescript = "deno run %",
       javascript = "node %",
-      -- markdown = "glow %",
+      markdown = "glow %",
       python = "python %",
       -- rust = "rustc % && ./$fileBase && rm $fileBase",
       rust = "cargo run",
       go = "go run %",
       sh = "sh %",
       c        = "gcc $file -o $fileBase.out; ./$fileBase.out",
-      -- cpp      = "g++ $file -o $fileBase.out; ./$fileBase.out",
-      cpp      = "g++ $file; ./a.out",
+      cpp      = "g++ $file -o $dir/a.out && $dir/./a.out",
       java     = "javac $file; java $fileBase",
       html     = "live-server $fileBase",
  
@@ -30,8 +29,8 @@ jaq_nvim.setup {
 
     -- Uses internal commands such as 'source' and 'luafile'
     internal = {
-      -- lua = "luafile %",
-      -- vim = "source %",
+      lua = "luafile %",
+      vim = "source %",
     },
   },
 

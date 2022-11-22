@@ -65,7 +65,7 @@ return packer.startup(function(use)
   use { "navarasu/onedark.nvim", commit = "df090f9d72d43aa51dec5760c44da288b58a79b6" }
   use { "sainnhe/gruvbox-material", commit = "2807579bd0a9981575dbb518aa65d3206f04ea02" }
   use { "gruvbox-community/gruvbox", commit = "95b120a15d0765037d2836d04e3360c273caf111" }
-
+  use { "https://gitlab.com/__tpb/monokai-pro.nvim", as = "monokai-pro.nvim", commit = "826d028edbcc7a8aadc0f7a32b32747d97575615" }
   -- Colorizer
   use { "NvChad/nvim-colorizer.lua", commit = "9dd7ecde55b06b5114e1fa67c522433e7e59db8b" }
 
@@ -110,7 +110,8 @@ return packer.startup(function(use)
   use { "davidgranstrom/nvim-markdown-preview", commit = "3d6f941beb223b23122973d077522e9e2ee33068" }
 
   -- For Code Runner
-  use {"is0n/jaq-nvim", commit = "236296aae555657487d1bb4d066cbde9d79d8cd4"}
+  use { "is0n/jaq-nvim", commit = "236296aae555657487d1bb4d066cbde9d79d8cd4" }
+  use { "CRAG666/code_runner.nvim", commit = "cbdd429972d0b55161fb9bab09862e730a4a72ac" }
 
 
   -- Automatically set up your configuration after cloning packer.nvim
