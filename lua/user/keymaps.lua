@@ -31,7 +31,14 @@ keymap("n", "<leader>wq", ":wq<CR>", opts)
 keymap("n", "<C-a>", "gg<S-v>G")
 
 -- Delete a word backwards
-keymap('n', 'db', 'vb"_d')
+keymap('n', 'db', 'vb"_d', opts)
+
+-- New tab 
+keymap('n', 'te', ':tabedit<CR>', opts)
+
+-- Split window
+keymap('n', 'ss', ':split<Return><C-w>w', opts)
+keymap('n', 'sv', ':vsplit<Return><C-w>w', opts)
 
 -- Better renaming
 keymap("n", "<C-r>", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
@@ -70,9 +77,6 @@ keymap("n", "<leader>cp", ":silent execute '!buildNote.sh %'<CR>", opts) -- For 
 -- Code Runner
 keymap("n", "<leader>r", ":Jaq<CR>", opts)
 
--- Split window
-keymap('n', 'ss', ':split<Return><C-w>w')
-keymap('n', 'sv', ':vsplit<Return><C-w>w')
 
 
 ----------------- Insert ---------------------
