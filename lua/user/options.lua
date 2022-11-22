@@ -42,3 +42,4 @@ opt.whichwrap:append("<,>,[,],h,l")         -- keys allowed to move to the previ
 opt.iskeyword:append("-")                   -- treats words with `-` as single words
 opt.background = "dark"                     -- Setting background dark
 opt.colorcolumn = "80"                      -- Side column 
+opt.linebreak = true
