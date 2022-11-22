@@ -15,6 +15,11 @@ local check_backspace = function()
 	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
 end
 
+local lspkind_status, lspkind = pcall(require, "lspkind")
+if not lspkind_status then 
+  return
+end
+
 local kind_icons = {
 	Text = "",
 	Method = "",
@@ -92,21 +97,28 @@ cmp.setup({
 			"s",
 		}),
 	}),
-	formatting = {
-		fields = { "kind", "abbr", "menu" },
-		format = function(entry, vim_item)
-			vim_item.kind = kind_icons[vim_item.kind]
-			vim_item.menu = ({
-				nvim_lsp = "",
-				nvim_lua = "",
-				luasnip = "",
-				buffer = "",
-				path = "",
-				emoji = "",
-			})[entry.source.name]
-			return vim_item
-		end,
-	},
+	-- formatting = {
+	-- 	fields = { "kind", "abbr", "menu" },
+	-- 	format = function(entry, vim_item)
+	-- 		vim_item.kind = kind_icons[vim_item.kind]
+	-- 		vim_item.menu = ({
+	-- 			nvim_lsp = "",
+	-- 			nvim_lua = "",
+	-- 			luasnip = "",
+	-- 			buffer = "",
+	-- 			path = "",
+	-- 			emoji = "",
+	-- 		})[entry.source.name]
+	-- 		return vim_item
+	-- 	end,
+	-- },
+  formatting = {
+    format = lspkind.cmp_format({
+      maxwidth = 50,
+      ellipsis_char = "..."
+    }),
+  }, 
+
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },

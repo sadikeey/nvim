@@ -62,9 +62,9 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
+  use { "navarasu/onedark.nvim", commit = "df090f9d72d43aa51dec5760c44da288b58a79b6" }
   use { "sainnhe/gruvbox-material", commit = "2807579bd0a9981575dbb518aa65d3206f04ea02" }
   use { "gruvbox-community/gruvbox", commit = "95b120a15d0765037d2836d04e3360c273caf111" }
-  use { "navarasu/onedark.nvim" }
 
   -- Colorizer
   use { "NvChad/nvim-colorizer.lua", commit = "9dd7ecde55b06b5114e1fa67c522433e7e59db8b" }
@@ -76,6 +76,7 @@ return packer.startup(function(use)
   use { "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" } -- snippet completions
   use { "hrsh7th/cmp-nvim-lsp", commit = "affe808a5c56b71630f17aa7c38e15c59fd648a8" }
   use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
+  use { "onsails/lspkind.nvim", commit = "c68b3a003483cf382428a43035079f78474cd11e" }
 
   -- snippets
   use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" } --snippet engine
@@ -94,11 +95,7 @@ return packer.startup(function(use)
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac" }
-
-  -- AutoTag
   use { "windwp/nvim-ts-autotag", commit = "fdefe46c6807441460f11f11a167a2baf8e4534b" }
-
-  -- Rainbow brackets
   use { "p00f/nvim-ts-rainbow", commit = "064fd6c0a15fae7f876c2c6dd4524ca3fad96750" }
 
   -- Git
@@ -110,7 +107,7 @@ return packer.startup(function(use)
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
 
   -- For Markdown
-  use { "davidgranstrom/nvim-markdown-preview" }
+  use { "davidgranstrom/nvim-markdown-preview", commit = "3d6f941beb223b23122973d077522e9e2ee33068" }
 
   -- For Code Runner
   use {"is0n/jaq-nvim", commit = "236296aae555657487d1bb4d066cbde9d79d8cd4"}

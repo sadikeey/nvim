@@ -39,6 +39,7 @@ keymap('n', 'te', ':tabedit<CR>', opts)
 -- Split window
 keymap('n', 'ss', ':split<Return><C-w>w', opts)
 keymap('n', 'sv', ':vsplit<Return><C-w>w', opts)
+keymap('n', 'sx', ':close<CR>', opts)
 
 -- Better renaming
 keymap("n", "<C-r>", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
@@ -55,11 +56,9 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Navigate buffers
+-- Buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-
--- Close buffers
 keymap("n", "<leader>x", "<cmd>Bdelete!<CR>", opts)
 
 -- Clear highlights
@@ -68,16 +67,6 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
-
-
--- For compiling different languages
-keymap("n", "<leader>cc", ":!g++ % -o %:r.out;<CR>", opts)
-keymap("n", "<leader>cp", ":silent execute '!buildNote.sh %'<CR>", opts) -- For pandoc compile
-
--- Code Runner
-keymap("n", "<leader>r", ":Jaq<CR>", opts)
-
-
 
 ----------------- Insert ---------------------
 
@@ -89,7 +78,6 @@ keymap("i", "jk", "<ESC>", opts)
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
-
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
@@ -98,8 +86,10 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
-
 ------------------ Plugins -------------------
+
+-- Code Runner
+keymap("n", "<leader>r", ":Jaq<CR>", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)

@@ -43,3 +43,4 @@ opt.iskeyword:append("-")                   -- treats words with `-` as single w
 opt.background = "dark"                     -- Setting background dark
 opt.colorcolumn = "80"                      -- Side column 
 opt.linebreak = true
+opt.backspace = "indent,eol,start"
