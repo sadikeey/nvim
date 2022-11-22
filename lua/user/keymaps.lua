@@ -17,7 +17,6 @@ vim.g.mapleader = " "
 
 --------------------- Normal ---------------------
 
-
 -- Better move around
 keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
@@ -27,6 +26,12 @@ keymap("n", "<leader>w", ":w<CR>", opts)
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader><S-q>", ":q!<CR>", opts)
 keymap("n", "<leader>wq", ":wq<CR>", opts)
+
+-- Select All
+keymap("n", "<C-a>", "gg<S-v>G")
+
+-- Delete a word backwards
+keymap('n', 'db', 'vb"_d')
 
 -- Better renaming
 keymap("n", "<C-r>", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
@@ -65,15 +70,10 @@ keymap("n", "<leader>cp", ":silent execute '!buildNote.sh %'<CR>", opts) -- For 
 -- Code Runner
 keymap("n", "<leader>r", ":Jaq<CR>", opts)
 
--- Backspace delete
-keymap("n", "C-BS", "dvb", opts)
-
--- Select All
-keymap("n", "<C-a>", "gg<S-v>G")
-
 -- Split window
 keymap('n', 'ss', ':split<Return><C-w>w')
 keymap('n', 'sv', ':vsplit<Return><C-w>w')
+
 
 ----------------- Insert ---------------------
 
