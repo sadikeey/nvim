@@ -16,7 +16,7 @@ local check_backspace = function()
 end
 
 local lspkind_status, lspkind = pcall(require, "lspkind")
-if not lspkind_status then 
+if not lspkind_status then
   return
 end
 
@@ -117,7 +117,7 @@ cmp.setup({
       maxwidth = 50,
       ellipsis_char = "..."
     }),
-  }, 
+  },
 
 	sources = {
 		{ name = "nvim_lsp" },

@@ -11,7 +11,7 @@ vim.g.mapleader = " "
 --   normal_mode = "n",
 --   insert_mode = "i",
 --   visual_mode = "v",
-  -- visual_block_mode = "x",
+-- visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
 
@@ -33,7 +33,7 @@ keymap("n", "<C-a>", "gg<S-v>G")
 -- Delete a word backwards
 keymap('n', 'db', 'vb"_d', opts)
 
--- New tab 
+-- New tab
 keymap('n', 'te', ':tabedit<CR>', opts)
 
 -- Split window

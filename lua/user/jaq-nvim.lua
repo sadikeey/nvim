@@ -24,7 +24,7 @@ jaq_nvim.setup {
       cpp      = "g++ $file -o $dir/a.out && $dir/./a.out",
       java     = "javac $file; java $fileBase",
       html     = "live-server $fileBase",
- 
+      js       = "node $file",
     },
 
     -- Uses internal commands such as 'source' and 'luafile'
