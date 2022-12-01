@@ -62,10 +62,12 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
-  use { "navarasu/onedark.nvim", commit = "df090f9d72d43aa51dec5760c44da288b58a79b6" }
+  -- use { "navarasu/onedark.nvim", commit = "df090f9d72d43aa51dec5760c44da288b58a79b6" }
+  use { "https://github.com/navarasu/onedark.nvim" }
   use { "sainnhe/gruvbox-material", commit = "2807579bd0a9981575dbb518aa65d3206f04ea02" }
   use { "gruvbox-community/gruvbox", commit = "95b120a15d0765037d2836d04e3360c273caf111" }
   use { "https://gitlab.com/__tpb/monokai-pro.nvim", as = "monokai-pro.nvim", commit = "826d028edbcc7a8aadc0f7a32b32747d97575615" }
+  use { "olimorris/onedarkpro.nvim" }
   -- Colorizer
   use { "NvChad/nvim-colorizer.lua", commit = "9dd7ecde55b06b5114e1fa67c522433e7e59db8b" }
 
@@ -113,6 +115,8 @@ return packer.startup(function(use)
   use { "is0n/jaq-nvim", commit = "236296aae555657487d1bb4d066cbde9d79d8cd4" }
   use { "CRAG666/code_runner.nvim", commit = "cbdd429972d0b55161fb9bab09862e730a4a72ac" }
 
+  -- Other Plugins
+  use { "derektata/lorem.nvim" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
