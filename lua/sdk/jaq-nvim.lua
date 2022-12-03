@@ -20,10 +20,10 @@ jaq_nvim.setup {
       rust = "cargo run",
       go = "go run %",
       sh = "sh %",
-      c        = "gcc $file -o $fileBase.out; ./$fileBase.out",
+      c        = "gcc $file -o $dir/a.out && $dir/./a.out",
       cpp      = "g++ $file -o $dir/a.out && $dir/./a.out",
       java     = "javac $file; java $fileBase",
-      html     = "live-server $fileBase",
+      html     = "live-server $file",
       js       = "node $file",
     },
 

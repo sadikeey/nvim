@@ -61,13 +61,10 @@ return packer.startup(function(use)
   use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
 
   -- Colorschemes
-  use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
-  -- use { "navarasu/onedark.nvim", commit = "df090f9d72d43aa51dec5760c44da288b58a79b6" }
-  use { "https://github.com/navarasu/onedark.nvim" }
-  use { "sainnhe/gruvbox-material", commit = "2807579bd0a9981575dbb518aa65d3206f04ea02" }
-  use { "gruvbox-community/gruvbox", commit = "95b120a15d0765037d2836d04e3360c273caf111" }
-  use { "https://gitlab.com/__tpb/monokai-pro.nvim", as = "monokai-pro.nvim", commit = "826d028edbcc7a8aadc0f7a32b32747d97575615" }
-  use { "olimorris/onedarkpro.nvim" }
+  use { "lunarvim/darkplus.nvim" }
+  use { "navarasu/onedark.nvim" }
+  use { "ellisonleao/gruvbox.nvim" }
+
   -- Colorizer
   use { "NvChad/nvim-colorizer.lua", commit = "9dd7ecde55b06b5114e1fa67c522433e7e59db8b" }
 

@@ -1,11 +1,5 @@
-local status_ok, onedark = pcall(require, "onedark")
-if not status_ok then
-	return
-end
-
 -- Lua
-onedark.load()
-onedark.setup  {
+require('onedark').setup  {
     -- Main options --
     style = 'dark', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
     transparent = true,  -- Show/hide background
