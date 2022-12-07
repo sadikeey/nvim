@@ -59,16 +59,9 @@ return packer.startup(function(use)
   use { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" }
   use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
   use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
-
-  -- Colorschemes
-  use { "lunarvim/darkplus.nvim" }
-  use { "navarasu/onedark.nvim" }
-  use { "ellisonleao/gruvbox.nvim" }
-  use { "catppuccin/nvim", as = "catppuccin" }
-
-  -- Colorizer
-  -- use { "NvChad/nvim-colorizer.lua", commit = "9dd7ecde55b06b5114e1fa67c522433e7e59db8b" }
   use { "norcalli/nvim-colorizer.lua", commit = "36c610a9717cc9ec426a07c8e6bf3b3abcb139d6" }
+  use { "davidgranstrom/nvim-markdown-preview", commit = "3d6f941beb223b23122973d077522e9e2ee33068" }
+  use { "is0n/jaq-nvim", commit = "236296aae555657487d1bb4d066cbde9d79d8cd4" } -- Code Runner
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
@@ -105,15 +98,14 @@ return packer.startup(function(use)
   use { "rcarriga/nvim-dap-ui", commit = "1cd4764221c91686dcf4d6b62d7a7b2d112e0b13" }
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
 
-  -- For Markdown
-  use { "davidgranstrom/nvim-markdown-preview", commit = "3d6f941beb223b23122973d077522e9e2ee33068" }
-
-  -- For Code Runner
-  use { "is0n/jaq-nvim", commit = "236296aae555657487d1bb4d066cbde9d79d8cd4" }
+  -- Colorschemes
+  use { "lunarvim/darkplus.nvim" }
+  use { "navarasu/onedark.nvim" }
+  use { "ellisonleao/gruvbox.nvim" }
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Other Plugins
-  use { "derektata/lorem.nvim" }
-  use { "folke/which-key.nvim" }
+  use { "derektata/lorem.nvim", commit="6b620787729065b78662488352d4d867726f5d15" }
   use { "ThePrimeagen/vim-be-good" }
 
   -- Automatically set up your configuration after cloning packer.nvim
