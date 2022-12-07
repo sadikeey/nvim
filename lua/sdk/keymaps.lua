@@ -20,6 +20,8 @@ vim.g.mapleader = " "
 -- Better move around
 keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
+keymap("n", "n", "nzzzv")
+keymap("n", "N", "Nzzzv")
 
 -- Better save and exit
 keymap("n", "<leader>w", ":w<CR>", opts)
@@ -71,7 +73,7 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 ----------------- Insert ---------------------
 
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+-- keymap("i", "jk", "<ESC>", opts)
 
 ---------------------- Visual -----------------------
 

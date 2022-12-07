@@ -1,9 +1,8 @@
-require "sdk.colorshemes.onedark"
+local colorsheme = "gruvbox"
+require("sdk.colorshemes." .. colorsheme)
 
--- vim.cmd ( "autocmd SourcePost * highlight Normal ctermbg=NONE guibg=NONE" )
-
-local status_ok, _ = pcall(vim.cmd, "colorscheme onedark")
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorsheme)
 if not status_ok then
-  print( "Colorscheme not found !" )
+	vim.notify("colorsheme " .. colorsheme .. "not found!")
 	return
 end
