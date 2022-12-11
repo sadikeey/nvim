@@ -6,7 +6,8 @@ local servers = {
 	"bashls",
 	"jsonls",
   "clangd",
-  "astro"
+  "astro",
+  "intelephense"
 }
 
 local settings = {
