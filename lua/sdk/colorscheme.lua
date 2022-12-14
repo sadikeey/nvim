@@ -1,4 +1,4 @@
-local colorsheme = "onedark"
+local colorsheme = "gruvbox"
 require("sdk.colorshemes." .. colorsheme)
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorsheme)

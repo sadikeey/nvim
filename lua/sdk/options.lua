@@ -42,5 +42,6 @@ opt.whichwrap:append("<,>,[,],h,l")         -- keys allowed to move to the previ
 opt.iskeyword:append("-")                   -- treats words with `-` as single words
 opt.background = "dark"                     -- Setting background dark
 opt.colorcolumn = "80"                      -- Side column 
-opt.linebreak = true
-opt.backspace = "indent,eol,start"
+opt.guicursor = "i:block-Cursor"            -- Setting block cursor even in insert mode.
+opt.linebreak = true                        -- Setting line break.
+opt.backspace = "indent,eol,start"          -- Fixing backspace.
