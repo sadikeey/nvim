@@ -102,7 +102,7 @@ return packer.startup(function(use)
   use { "lunarvim/darkplus.nvim" }
   use { "navarasu/onedark.nvim" }
   use { "ellisonleao/gruvbox.nvim" }
-  use { "catppuccin/nvim", as = "catppuccin" }
+  use { "sainnhe/gruvbox-material" }
 
   -- Other Plugins
   use { "derektata/lorem.nvim", commit="6b620787729065b78662488352d4d867726f5d15" }

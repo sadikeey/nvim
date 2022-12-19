@@ -5,9 +5,8 @@ local servers = {
 	"tsserver",
 	"bashls",
 	"jsonls",
+  "jdtls",
   "clangd",
-  "astro",
-  "intelephense"
 }
 
 local settings = {
