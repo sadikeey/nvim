@@ -7,6 +7,7 @@ local servers = {
 	"jsonls",
   "jdtls",
   "clangd",
+  "texlab",
 }
 
 local settings = {

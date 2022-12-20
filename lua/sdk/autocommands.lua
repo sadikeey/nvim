@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = { "gitcommit"},
+	pattern = { "gitcommit" },
 	callback = function()
 		vim.opt_local.wrap = true
 		vim.opt_local.spell = true
@@ -17,14 +17,24 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = { "markdown" },
+	pattern = { "*.md" },
 	callback = function()
 		vim.opt_local.wrap = true
 		vim.opt_local.spell = true
 	end,
 })
 
-vim.cmd[[ autocmd BufWritePost *.md silent !buildNote %:p ]]
+-- vim.cmd([[ autocmd BufWritePost *.md silent !buildNote %:p ]])
+
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+-- 	pattern = { "*.tex" },
+-- 	callback = function()
+-- 		-- :cd %:p:h
+-- 		-- echo expand('%:p')
+-- 		vim.cmd([[ silent !pdflatex % ]])
+-- 		-- print("It worked!")
+-- 	end,
+-- })
 
 vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
 -- vim.api.nvim_create_autocmd({ "BufEnter" }, {

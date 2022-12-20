@@ -25,6 +25,7 @@ jaq_nvim.setup {
       java     = "javac $file; java $fileBase",
       html     = "live-server $file",
       js       = "node $file",
+      tex      = "pdflatex $file",
     },
 
     -- Uses internal commands such as 'source' and 'luafile'
